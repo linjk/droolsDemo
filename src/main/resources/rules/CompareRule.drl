@@ -25,3 +25,11 @@ rule "test_memberof"
     then
          System.out.println("rule emit: test_memberof");
     end
+
+rule "test_matches"
+    when
+        CompareEntity(names matches "lin.*")
+        //CompareEntity(list contains names)
+    then
+         System.out.println("rule emit: test_matches");
+    end

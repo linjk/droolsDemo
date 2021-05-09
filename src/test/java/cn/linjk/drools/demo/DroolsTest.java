@@ -37,7 +37,7 @@ public class DroolsTest {
         KieSession kieSession = kieContainer.newKieSession();
         // Fact对象
         CompareEntity order = new CompareEntity();
-        order.setNames("hehe");
+        order.setNames("lin11");
         kieSession.insert(order);
         // 激活规则，由drools框架自动进行规则匹配
         kieSession.fireAllRules();
