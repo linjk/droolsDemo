@@ -1,0 +1,19 @@
+package CompareTest
+
+import cn.linjk.drools.demo.entity.CompareEntity
+
+rule "test_contains"
+    when
+        CompareEntity(names contains "linjk")
+        //CompareEntity(list contains names)
+    then
+         System.out.println("rule emit: test_contains");
+    end
+
+rule "test_not_contains"
+    when
+        CompareEntity(names not contains "linjk")
+        //CompareEntity(list contains names)
+    then
+         System.out.println("rule emit: test_not_contains");
+    end
