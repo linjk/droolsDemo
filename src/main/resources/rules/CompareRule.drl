@@ -17,3 +17,11 @@ rule "test_not_contains"
     then
          System.out.println("rule emit: test_not_contains");
     end
+
+rule "test_memberof"
+    when
+        CompareEntity("hehe" memberOf names)
+        //CompareEntity(list contains names)
+    then
+         System.out.println("rule emit: test_memberof");
+    end
