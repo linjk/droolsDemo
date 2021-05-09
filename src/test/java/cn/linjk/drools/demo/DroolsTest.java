@@ -2,6 +2,7 @@ package cn.linjk.drools.demo;
 
 import cn.linjk.drools.demo.entity.CompareEntity;
 import cn.linjk.drools.demo.entity.Order;
+import org.drools.core.base.RuleNameEqualsAgendaFilter;
 import org.junit.Test;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
@@ -40,7 +41,7 @@ public class DroolsTest {
         order.setNames("lin11");
         kieSession.insert(order);
         // 激活规则，由drools框架自动进行规则匹配
-        kieSession.fireAllRules();
+        kieSession.fireAllRules(new RuleNameEqualsAgendaFilter("test_matches"));
         kieSession.dispose();
     }
 }
